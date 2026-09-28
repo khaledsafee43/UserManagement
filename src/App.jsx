@@ -97,7 +97,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f8f9fb]">
+    <div className="min-h-screen bg-slate-950 text-white">
       <Header userCount={users.length} />
 
       <main className="mx-auto w-full max-w-[1100px] px-3 py-7 sm:px-4 sm:py-9 lg:py-12">

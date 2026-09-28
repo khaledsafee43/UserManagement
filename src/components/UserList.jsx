@@ -26,7 +26,7 @@ export default function UserList({ users, search, onSearchChange, onEdit, onDele
           <div className="h-[60px] animate-shimmer rounded-lg bg-[linear-gradient(90deg,#f3f4f6_25%,#ecedef_37%,#f3f4f6_63%)] bg-[length:400%_100%]" />
         </div>
       ) : users.length === 0 ? (
-        <div className="py-12 text-center text-gray-500">
+        <div className="py-12 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-base font-bold text-transparent sm:text-lg">
           <UsersRound className="mx-auto mb-3" size={40} strokeWidth={1.5} />
           <p>{search ? 'No users match your search.' : 'No users registered yet.'}</p>
         </div>
