@@ -1,16 +1,37 @@
-# React + Vite
+# User Management — React + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project converts the original HTML/CSS/JavaScript User Management UI to React with reusable components and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `Header.jsx` — top header and registered-user count
+- `UserForm.jsx` — create/update user form
+- `UserList.jsx` — user list, search and loading/empty states
+- `UserRow.jsx` — individual user row with edit/delete actions
+- `Toast.jsx` — success/error notifications
+- `App.jsx` — API state and CRUD orchestration
 
-## React Compiler
+## API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The original API URL is preserved:
 
-## Expanding the ESLint configuration
+`http://localhost:1212/api/users`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Expected endpoints:
+
+- `GET /api/users`
+- `GET /api/users/:id`
+- `POST /api/users`
+- `PUT /api/users/:id`
+- `DELETE /api/users/:id`
+
+## Run
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the Vite URL shown in the terminal.
+
+Make sure your Node.js backend is running on port `1212`.
